@@ -81,6 +81,27 @@ namespace TestFlightStats
             Assert.AreEqual(expectedStringMessage, actualStringMessage);
         }
 
+        /// <summary>
+        /// This test method is designed to test the string conversion of a measure based on all values (Farhenheit, Celsius, Kelvin and Local Speed of Sound) in string
+        /// </summary>
+        [Test]
+        public void ToString_ConstructorSingleString_Success()
+        {
+            //given
+            string expectedStringMessage = "22.00;-5.56;267.44;636.81";
+            Measure measure = new Measure(expectedStringMessage);
+            string actualStringMessage = "";
+
+            //when
+            actualStringMessage = measure.ToString();
+
+            //then
+            Assert.AreEqual(expectedStringMessage, actualStringMessage);
+        }
+
+        /// <summary>
+        /// This test method is designed to test the constructor when the string format is not correct (empty value)
+        /// </summary>
         [Test]
         public void Measure_WrongFormat_ThrowWrongFormatMeasureException()
         {

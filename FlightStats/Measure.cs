@@ -14,7 +14,10 @@ namespace FlightStats
         #region constructors
         public Measure(string dataFromLog)
         {
-
+            //extraire chaque valeur dans un tableau
+            //parcourir le tableau
+            //si on détecte un élément "vide" puis un élément renseigné -> throw
+            throw In
         }
 
         public Measure(double temperatureInFahrenheit)
