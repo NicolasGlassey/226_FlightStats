@@ -12,12 +12,17 @@ namespace FlightStats
         #endregion private attributes
 
         #region constructors
+        public Measure(string dataFromLog)
+        {
+
+        }
+
         public Measure(double temperatureInFahrenheit)
         {
             throw new NotImplementedException();
         }
 
-        public Measure(double temperatureInFahrenheit, double temperatureInCelsius)
+        public Measure(double  temperatureInFahrenheit, double temperatureInCelsius)
         {
             throw new NotImplementedException();
         }
@@ -39,5 +44,15 @@ namespace FlightStats
             throw new NotImplementedException();
         }
         #endregion public accessors and mutators methods
+
+        #region private methods
+        public bool CheckLogFormat()
+        {
+            throw new NotImplementedException();
+        }
+        #endregion private methods
     }
+
+    public class MeasureException : Exception { }
+    public class WrongFormatMeasureException : Exception { }
 }

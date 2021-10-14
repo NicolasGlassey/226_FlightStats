@@ -81,6 +81,20 @@ namespace TestFlightStats
             Assert.AreEqual(expectedStringMessage, actualStringMessage);
         }
 
+        [Test]
+        public void Measure_WrongFormat_ThrowWrongFormatMeasureException()
+        {
+            //given
+            //refere to Setup method
+
+            //when + then
+            Assert.Throws<WrongFormatMeasureException>(delegate
+            {
+            new Measure("22;-6; ;636");
+            }
+            );
+        }
+
         /// <summary>
         /// This test method is designed to test the class with several values in different cases
         /// </summary>
